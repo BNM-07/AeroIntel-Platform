@@ -271,8 +271,9 @@ def load_models():
 
 @st.cache_data
 def load_raw_data():
-    df_p = pd.read_csv('data/emirates_pricing.csv') if os.path.exists('data/emirates_pricing.csv') else pd.DataFrame()
-    df_d = pd.read_csv('data/emirates_delay.csv') if os.path.exists('data/emirates_delay.csv') else pd.DataFrame()
+    df_p = pd.read_csv('data/pricing_data.csv') if os.path.exists('data/pricing_data.csv') else pd.DataFrame()
+    df_d = pd.read_csv('data/delay_data.csv') if os.path.exists('data/delay_data.csv') else pd.DataFrame()
+    return df_p, df_d
     return df_p, df_d
 
 # ==========================

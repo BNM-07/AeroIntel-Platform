@@ -165,9 +165,9 @@ def load_data(task_type, uploaded_file=None):
         return pd.read_csv(uploaded_file)
     try:
         if task_type == 'Classification (Delay)':
-            return pd.read_csv('data/emirates_delay.csv')
+            return pd.read_csv('data/delay_data.csv')
         else:
-            return pd.read_csv('data/emirates_pricing.csv')
+            return pd.read_csv('data/pricing_data.csv')
     except Exception as e:
         st.error(f"Cannot load default data. Please ensure 'data/' directory exists relative to execution folder. {e}")
         return pd.DataFrame()
